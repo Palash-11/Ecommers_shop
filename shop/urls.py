@@ -1,0 +1,19 @@
+from django.urls import include, path
+from rest_framework.routers import DefaultRouter
+
+from .views import (
+    CategoryViewSet,
+    DashboardCountsView,
+    OrderCreateView,
+    ProductViewSet,
+)
+
+router = DefaultRouter()
+router.register("categories", CategoryViewSet)
+router.register("products", ProductViewSet)
+
+urlpatterns = [
+    path("", include(router.urls)),
+    path("orders/", OrderCreateView.as_view()),
+    path("dashboard/counts/", DashboardCountsView.as_view()),
+]
