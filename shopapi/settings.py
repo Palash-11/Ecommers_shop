@@ -192,13 +192,13 @@ else:
         "django.core.files.storage.FileSystemStorage"
     )
 
-STORAGES = {
-    "default": {
-        "BACKEND": DEFAULT_MEDIA_BACKEND,
-    },
-    "staticfiles": {
-        "BACKEND": (
-            "whitenoise.storage.CompressedManifestStaticFilesStorage"
-        ),
-    },
-}
+# STORAGES = {
+#     "default": {
+#         "BACKEND": DEFAULT_MEDIA_BACKEND,
+#     },
+#     "staticfiles": {
+#         "BACKEND": (
+#             "whitenoise.storage.CompressedManifestStaticFilesStorage"
+#         ),
+#     },
+# }
